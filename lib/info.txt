@@ -1,0 +1,4 @@
+consumer_key = "ck_4fce00f017c4d8783497721a7913508b1ce25926"
+consumer_secret = "cs_0304b6ec6aa8dcaba5a1e64ec66e216439521d23"
+
+https://www.shopbigmarket.com/wp-json/wc/v3/products?consumer_key=ck_4fce00f017c4d8783497721a7913508b1ce25926&consumer_secret=cs_0304b6ec6aa8dcaba5a1e64ec66e216439521d23
