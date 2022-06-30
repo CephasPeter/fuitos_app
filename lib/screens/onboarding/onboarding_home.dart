@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../assets/color/color.dart';
 
@@ -51,27 +52,35 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text("Available New version", style: TextStyle(fontSize: multiplier*0.06, fontWeight: FontWeight.bold, color: Colors.white)),
-                    Container(
-                      width: width*0.2,
-                      height: width*0.2,
-                      decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(.15),
-                          border: Border.all(
-                            color: Colors.transparent,
+                    InkWell(
+                      onTap: (){
+
+                      },
+                      child: Container(
+                        width: width*0.2,
+                        height: width*0.2,
+                        decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(.15),
+                            border: Border.all(
+                              color: Colors.transparent,
+                            ),
+                            borderRadius: const BorderRadius.all(Radius.circular(180))
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(width*0.03),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white.withOpacity(.25),
+                                border: Border.all(
+                                  color: Colors.transparent,
+                                ),
+                                borderRadius: const BorderRadius.all(Radius.circular(180))
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(width*0.03),
+                              child: SvgPicture.asset("assets/images/rightArrow.svg"),
+                            ),
                           ),
-                          borderRadius: const BorderRadius.all(Radius.circular(180))
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(width*0.03),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.25),
-                              border: Border.all(
-                                color: Colors.transparent,
-                              ),
-                              borderRadius: const BorderRadius.all(Radius.circular(180))
-                          ),
-                          child: Icon(Icons.arrow_right_rounded, color: Colors.white, size: width*0.08,),
                         ),
                       ),
                     )
