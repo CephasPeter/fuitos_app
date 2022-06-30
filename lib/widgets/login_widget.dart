@@ -89,6 +89,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     ),
                   ),
                 ),
+               
                 const LabelText(text: "Password"),
                 Padding(
                   padding: const EdgeInsets.all(10),
