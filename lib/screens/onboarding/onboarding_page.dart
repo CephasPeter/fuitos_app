@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -292,14 +293,21 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                     color: Colors.white,
                   ),
-                  child: PageView.builder(itemCount: 2,controller: pageController,itemBuilder: (context, index) {
-                    currentPage = index;
-                    if(index == 0) {
+                  child: PageView.builder(
+                    itemCount: 2,
+                    controller: pageController,
+                    itemBuilder: (context, index) {
+                      if(index == 0) {
                       return bottomScreen1;
                     } else {
-                      return bottomScreen2;
-                    }
-                  },
+                        return bottomScreen2;
+                      }
+                    },
+                    onPageChanged: (index) {
+                      setState(() {
+                        currentPage = index;
+                      });
+                    },
                   ),
                 ),
               ),
@@ -319,7 +327,20 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             onTap: (){
 
                             }, child: Text("Skip", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
-
+                        SizedBox(
+                          width: width*0.3,
+                          child: DotsIndicator(
+                              dotsCount: 2,
+                              position: currentPage.toDouble(),
+                              decorator: DotsDecorator(
+                                activeColor: AppColor.primary,
+                                color: AppColor.accent,
+                                size: const Size(8.0, 8.0),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+                                activeSize: const Size(8.0, 8.0),
+                                activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+                              )),
+                        ),
                         InkWell(
                           onTap: (){
                             if(currentPage == 0) {
