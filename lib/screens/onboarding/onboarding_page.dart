@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fuitos_app/screens/onboarding/onboarding_last.dart';
 
 import '../../assets/color/color.dart';
 
@@ -346,7 +347,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             if(currentPage == 0) {
                               pageController.nextPage(duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
                             } else {
-                              //Navigator.pop(context);
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const OnboardingLast(),
+                                ),
+                              );
                             }
                           }, child: Text("Next", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
                       ],

@@ -9,7 +9,7 @@ import '../../assets/color/color.dart';
 class OnboardingLast extends StatefulWidget {
   const OnboardingLast({Key? key}) : super(key: key);
 
-  static const String route = "/OnboardingLast";
+  static const String route = "/onboardingLast";
 
   @override
   State<OnboardingLast> createState() => _OnboardingLastState();
@@ -239,121 +239,44 @@ class _OnboardingLastState extends State<OnboardingLast> {
       child: Material(
         type: MaterialType.transparency,
         child: Container(
-          color: Colors.white,
-          child: Stack(
+          color: Colors.black,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
-                height: height*0.55,
-                width: width,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/background2.png"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(top: kToolbarHeight*0.8,left: width*0.03,right: width*0.03),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: InkWell(
-                          onTap: (){
-                            Navigator.pop(context);
-                          },
-                          child: SvgPicture.asset(
-                            "assets/images/backArrow.svg",
-                            height: width*0.07,
-                            width: width*0.07,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: width*0.18,
-                        color: Colors.transparent,
-                        child: Padding(
-                          padding: EdgeInsets.only(bottom: width*0.06),
-                          child: SvgPicture.asset("assets/images/appNameLogoWhite.svg"),
-                        ),
-                      )
-                    ],
+              Padding(
+                padding: EdgeInsets.only(top: kToolbarHeight*0.8,left: width*0.03,right: width*0.03),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: SvgPicture.asset(
+                      "assets/images/backArrow.svg",
+                      height: width*0.07,
+                      width: width*0.07,
+                    ),
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
+              Padding(
+                padding: EdgeInsets.only(left: width*0.06,right: width*0.06,top: height*0.03),
                 child: Container(
                   height: height*0.5,
-                  width: width,
                   decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(30),
-                      topLeft: Radius.circular(30),
-                    ),
-                    color: Colors.white,
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/background3.png"),
+                      fit: BoxFit.cover,
+                    )
                   ),
-                  child: PageView.builder(
-                    itemCount: 2,
-                    controller: pageController,
-                    itemBuilder: (context, index) {
-                      if(index == 0) {
-                        return bottomScreen1;
-                      } else {
-                        return bottomScreen2;
-                      }
-                    },
-                    onPageChanged: (index) {
-                      setState(() {
-                        currentPage = index;
-                      });
-                    },
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: height*0.04,left: width * 0.1, right: width * 0.1,),
-                  child: Container(
-                    height: height*0.1,
-                    width: width,
-                    color: Colors.transparent,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InkWell(
-                            onTap: (){
-
-                            }, child: Text("Skip", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
-                        SizedBox(
-                          width: width*0.3,
-                          child: DotsIndicator(
-                              dotsCount: 3,
-                              position: currentPage.toDouble(),
-                              decorator: DotsDecorator(
-                                activeColor: AppColor.primary,
-                                color: AppColor.accent,
-                                size: const Size(8.0, 8.0),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-                                activeSize: const Size(8.0, 8.0),
-                                activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-                              )),
-                        ),
-                        InkWell(
-                            onTap: (){
-                              if(currentPage == 0) {
-                                pageController.nextPage(duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
-                              } else {
-                                //Navigator.pop(context);
-                              }
-                            }, child: Text("Next", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
-                      ],
+                  child: Padding(
+                    padding: EdgeInsets.only(top: height*0.05,left: width*0.08,right: width*0.08,bottom: height*0.05),
+                    child: SvgPicture.asset(
+                      "assets/images/circles.svg",
                     ),
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),
