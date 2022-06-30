@@ -330,7 +330,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         SizedBox(
                           width: width*0.3,
                           child: DotsIndicator(
-                              dotsCount: 2,
+                              dotsCount: 3,
                               position: currentPage.toDouble(),
                               decorator: DotsDecorator(
                                 activeColor: AppColor.primary,
