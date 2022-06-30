@@ -5,8 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fuitos_app/assets/color/color.dart';
 import 'package:fuitos_app/helpers/login_or_signup.dart';
 import 'package:fuitos_app/helpers/login_type.dart';
-import 'package:fuitos_app/screens/forget_password_screen.dart';
-import 'package:fuitos_app/screens/login_screen.dart';
+import 'package:fuitos_app/screens/auth/forget_password_screen.dart';
+import 'package:fuitos_app/screens/auth/login_screen.dart';
 import 'package:fuitos_app/widgets/form_label.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:provider/provider.dart';
@@ -352,7 +352,9 @@ class _SignUpWidget extends State<SignUpWidget> {
                               ),
                             );
                           });
-                      Timer(const Duration(seconds: 3), () {});
+                      Timer(const Duration(seconds: 3), () {
+                        
+                      });
                     }
                   },
                 ),

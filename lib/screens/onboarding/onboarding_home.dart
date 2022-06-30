@@ -124,7 +124,7 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                     )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

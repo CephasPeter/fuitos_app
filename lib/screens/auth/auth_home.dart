@@ -7,7 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../assets/color/color.dart';
 import '../../assets/styles/textstyles.dart';
 import '../../widgets/buttons.dart';
-import '../login_screen.dart';
+import 'login_screen.dart';
 
 class AuthHome extends StatefulWidget {
   const AuthHome({Key? key}) : super(key: key);

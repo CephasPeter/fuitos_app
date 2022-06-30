@@ -5,8 +5,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fuitos_app/assets/color/color.dart';
 import 'package:fuitos_app/helpers/login_or_signup.dart';
 import 'package:fuitos_app/helpers/login_type.dart';
-import 'package:fuitos_app/screens/forget_password_screen.dart';
-import 'package:fuitos_app/screens/login_screen.dart';
+import 'package:fuitos_app/screens/auth/forget_password_screen.dart';
+import 'package:fuitos_app/screens/auth/login_screen.dart';
+import 'package:fuitos_app/screens/terms/terms_&_condition.dart';
 import 'package:fuitos_app/widgets/form_label.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:provider/provider.dart';
@@ -89,7 +90,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                     ),
                   ),
                 ),
-               
                 const LabelText(text: "Password"),
                 Padding(
                   padding: const EdgeInsets.all(10),
@@ -187,7 +187,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                           });
                       Timer(const Duration(seconds: 2), () {
                         Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(builder: (_) => Scaffold()),
+                            MaterialPageRoute(
+                                builder: (_) => const TermsAndConditions()),
                             (_) => false);
                       });
                     }
