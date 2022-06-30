@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fuitos_app/assets/color/color.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
-  const ForgetPasswordScreen({Key key}) : super(key: key);
+  const ForgetPasswordScreen({Key? key}) : super(key: key);
 
   @override
   State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
