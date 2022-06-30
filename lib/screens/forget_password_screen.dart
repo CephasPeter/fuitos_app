@@ -48,7 +48,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                     child: TextFormField(
                       onSaved: (val) => print(val),
                       validator: (val) {
-                        if (val.isEmpty && !val.contains("@")) {
+                        if (val!.isEmpty && !val.contains("@")) {
                           return "Enter a valid E-mail";
                         }
                         return null;
