@@ -46,23 +46,40 @@ class _OnboardingHomeState extends State<OnboardingHome> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
+                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.5, bottom: height * 0.03),
+                child: Container(
+                  height: width*0.18,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.transparent,
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(80))
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(width*0.05),
+                    child: SvgPicture.asset("assets/images/appNameLogo.svg"),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: width * 0.08, right: width * 0.05, bottom: height * 0.01),
                 child: Text("NEED", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
               ),
               Padding(
-                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
+                padding: EdgeInsets.only(left: width * 0.08, right: width * 0.05, bottom: height * 0.01),
                 child: Text("ARTISAN?", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
               ),
               Padding(
-                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
+                padding: EdgeInsets.only(left: width * 0.08, right: width * 0.05, bottom: height * 0.01),
                 child: Text("GOT YOU", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
               ),
               Padding(
-                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.02),
+                padding: EdgeInsets.only(left: width * 0.08, right: width * 0.05, bottom: height * 0.02),
                 child: Text("COVERED", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
               ),
               Padding(
-                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.08),
+                padding: EdgeInsets.only(left: width * 0.08, right: width * 0.05, bottom: height * 0.08),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
