@@ -54,10 +54,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     children: [
                       Align(
                         alignment: Alignment.topLeft,
-                        child: SvgPicture.asset(
-                          "assets/images/backArrow.svg",
-                          height: width*0.07,
-                          width: width*0.07,
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                          child: SvgPicture.asset(
+                            "assets/images/backArrow.svg",
+                            height: width*0.07,
+                            width: width*0.07,
+                          ),
                         ),
                       ),
                       Container(
