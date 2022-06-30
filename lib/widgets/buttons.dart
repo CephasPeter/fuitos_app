@@ -46,6 +46,7 @@ class CurvedButton extends StatelessWidget {
         color: color,
       ),
       child: InkWell(
+        onTap: onPressed,
         child: IgnorePointer(
             child: Stack(
               children: [
@@ -62,7 +63,6 @@ class CurvedButton extends StatelessWidget {
               ],
             )
         ),
-        onTap: onPressed,
       ),
     );
   }
@@ -75,8 +75,6 @@ class PlatformIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Platform.isIOS
-        ? CupertinoButton(child: child, onPressed: onPressed)
-        : TextButton(onPressed: onPressed, child: child);
+    return Platform.isIOS ? CupertinoButton(onPressed: onPressed, child: child) : TextButton(onPressed: onPressed, child: child);
   }
 }
