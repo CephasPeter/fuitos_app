@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../assets/color/color.dart';
 import '../../assets/styles/textstyles.dart';
 import '../../widgets/buttons.dart';
+import '../login_screen.dart';
 
 class AuthHome extends StatefulWidget {
   const AuthHome({Key? key}) : super(key: key);
@@ -110,7 +111,7 @@ class _AuthHomeState extends State<AuthHome> {
                             onPressed: (){
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => const AuthHome(),
+                                  builder: (context) => const LoginScreen(),
                                 ),
                               );
                             }),
@@ -124,7 +125,7 @@ class _AuthHomeState extends State<AuthHome> {
                             onPressed: (){
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => const AuthHome(),
+                                  builder: (context) => const LoginScreen(),
                                 ),
                               );
                             })
