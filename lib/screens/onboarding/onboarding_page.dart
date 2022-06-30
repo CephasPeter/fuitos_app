@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fuitos_app/screens/auth/auth_home.dart';
 import 'package:fuitos_app/screens/onboarding/onboarding_last.dart';
 
 import '../../assets/color/color.dart';
@@ -326,7 +327,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       children: [
                         InkWell(
                             onTap: (){
-
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const AuthHome(),
+                                ),
+                              );
                             }, child: Text("Skip", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
                         SizedBox(
                           width: width*0.3,
