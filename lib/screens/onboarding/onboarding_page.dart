@@ -39,7 +39,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           child: Stack(
             children: [
               Container(
-                height: height*0.6,
+                height: height*0.55,
                 width: width,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -47,7 +47,45 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     fit: BoxFit.cover,
                   ),
                 ),
-              )
+                child: Padding(
+                  padding: EdgeInsets.only(top: kToolbarHeight*0.8,left: width*0.03,right: width*0.03),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: SvgPicture.asset(
+                          "assets/images/backArrow.svg",
+                          height: width*0.07,
+                          width: width*0.07,
+                        ),
+                      ),
+                      Container(
+                        height: width*0.18,
+                        color: Colors.transparent,
+                        child: Padding(
+                          padding: EdgeInsets.all(width*0.05),
+                          child: SvgPicture.asset("assets/images/appNameLogo.svg",color: Colors.white),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  height: height*0.5,
+                  width: width,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(30),
+                      topLeft: Radius.circular(30),
+                    ),
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
