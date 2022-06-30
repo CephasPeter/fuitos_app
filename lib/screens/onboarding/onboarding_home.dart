@@ -46,6 +46,22 @@ class _OnboardingHomeState extends State<OnboardingHome> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
+                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
+                child: Text("NEED", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
+                child: Text("ARTISAN?", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
+                child: Text("GOT YOU", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.02),
+                child: Text("COVERED", style: TextStyle(fontSize: multiplier*0.18, fontWeight: FontWeight.bold, color: Colors.white)),
+              ),
+              Padding(
                 padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.08),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +70,6 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                     Text("Available New version", style: TextStyle(fontSize: multiplier*0.06, fontWeight: FontWeight.bold, color: Colors.white)),
                     InkWell(
                       onTap: (){
-
                       },
                       child: Container(
                         width: width*0.2,
