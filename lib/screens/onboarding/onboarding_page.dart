@@ -35,17 +35,19 @@ class _OnboardingPageState extends State<OnboardingPage> {
       child: Material(
         type: MaterialType.transparency,
         child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/background.png"),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.end,
+          color: Colors.white,
+          child: Stack(
             children: [
-
+              Container(
+                height: height*0.6,
+                width: width,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/background2.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              )
             ],
           ),
         ),
