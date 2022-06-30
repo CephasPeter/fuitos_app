@@ -65,7 +65,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         color: Colors.transparent,
                         child: Padding(
                           padding: EdgeInsets.only(bottom: width*0.06),
-                          child: SvgPicture.asset("assets/images/appNameLogo.svg"),
+                          child: SvgPicture.asset("assets/images/appNameLogoWhite.svg"),
                         ),
                       )
                     ],
