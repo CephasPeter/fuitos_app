@@ -7,7 +7,7 @@ import 'package:fuitos_app/widgets/signup_widget.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key key}) : super(key: key);
+  const LoginScreen({Key? key}) : super(key: key);
 
   static const String routeName = "/loginScreen";
   @override
@@ -37,9 +37,9 @@ class SubmitButton extends StatefulWidget {
   final LoginType loginType;
 
   const SubmitButton({
-    Key key,
-    @required this.onPressed,
-    @required this.loginType,
+    Key? key,
+    required this.onPressed,
+    required this.loginType,
   }) : super(key: key);
 
   @override

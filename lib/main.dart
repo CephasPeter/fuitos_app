@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fuitos_app/assets/color/color.dart';
 import 'package:fuitos_app/helpers/login_or_signup.dart';
 import 'package:fuitos_app/screens/login_screen.dart';
+import 'package:fuitos_app/screens/onboarding/onboarding_home.dart';
 import 'package:provider/provider.dart';
 import 'package:splashscreen/splashscreen.dart';
 
@@ -26,7 +27,7 @@ class App extends StatelessWidget {
         home: ChangeNotifierProvider(
           create: (context) => LoginOrSignUp(),
           builder: (context, child) => child,
-          child: const LoginScreen(),
+          child: const OnboardingHome(),
         ),
       );
 }

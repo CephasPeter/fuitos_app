@@ -12,7 +12,7 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:provider/provider.dart';
 
 class LoginWidget extends StatefulWidget {
-  const LoginWidget({Key key}) : super(key: key);
+  const LoginWidget({Key? key}) : super(key: key);
 
   @override
   State<LoginWidget> createState() => _LoginWidgetState();
@@ -61,7 +61,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   child: TextFormField(
                     onSaved: (val) => print(val),
                     validator: (val) {
-                      if (val.isEmpty && !val.contains("@")) {
+                      if (val!.isEmpty && !val.contains("@")) {
                         return "Enter a valid E-mail";
                       }
                       return null;
@@ -99,7 +99,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       TextFormField(
                         onSaved: (val) => print(val),
                         validator: (val) {
-                          if (val.isEmpty) {
+                          if (val!.isEmpty) {
                             return "Enter a valid password";
                           }
                           return null;
@@ -161,7 +161,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       value: rememberMe,
                       onChanged: (v) {
                         setState(() {
-                          rememberMe = v;
+                          rememberMe = v!;
                         });
                       },
                     ),
@@ -172,7 +172,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   loginType: LoginType.login,
                   onPressed: () {
                     var formState = formKeyLogin.currentState;
-                    if (formState.validate()) {
+                    if (formState!.validate()) {
                       formState.save();
                       showDialog(
                           context: context,
