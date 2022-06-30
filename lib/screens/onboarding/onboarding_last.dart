@@ -288,8 +288,8 @@ class _OnboardingLastState extends State<OnboardingLast> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text("Finish", style: TextStyle(fontSize: multiplier*0.12, fontWeight: FontWeight.bold, color: AppColor.accent)),
-                        Text("Skilled  Professionals", style: TextStyle(fontSize: multiplier*0.14, fontWeight: FontWeight.bold, color: Colors.black)),
+                        Text("Finish", style: TextStyle(fontSize: multiplier*0.11, fontWeight: FontWeight.bold, color: AppColor.accent)),
+                        Text("Explore Now!", style: TextStyle(fontSize: multiplier*0.14, fontWeight: FontWeight.bold, color: Colors.white)),
                         Padding(
                             padding: EdgeInsets.only(bottom: height*0.02,right: width*0.6,top: height*0.02),
                             child: Container(
