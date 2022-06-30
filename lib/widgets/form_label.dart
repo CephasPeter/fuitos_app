@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fuitos_app/assets/color/color.dart';
 
 class LabelText extends StatelessWidget {
-  const LabelText({Key key, @required this.text}) : super(key: key);
+  const LabelText({Key? key, required this.text}) : super(key: key);
   final String text;
 
   @override

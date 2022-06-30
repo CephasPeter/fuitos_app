@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../assets/color/color.dart';
+
 class OnboardingHome extends StatefulWidget {
   const OnboardingHome({Key? key}) : super(key: key);
 
@@ -12,7 +14,6 @@ class OnboardingHome extends StatefulWidget {
 }
 
 class _OnboardingHomeState extends State<OnboardingHome> {
-
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;

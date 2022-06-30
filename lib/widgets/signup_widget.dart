@@ -12,7 +12,7 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:provider/provider.dart';
 
 class SignUpWidget extends StatefulWidget {
-  const SignUpWidget({Key key}) : super(key: key);
+  const SignUpWidget({Key? key}) : super(key: key);
 
   @override
   State<SignUpWidget> createState() => _SignUpWidget();
@@ -71,7 +71,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                   child: TextFormField(
                     onSaved: (val) => print(val),
                     validator: (val) {
-                      if (val.isEmpty) {
+                      if (val!.isEmpty) {
                         return "Name cannot be empty";
                       }
                       return null;
@@ -103,7 +103,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                   child: TextFormField(
                     onSaved: (val) => print(val),
                     validator: (val) {
-                      if (!val.contains("@")) {
+                      if (!val!.contains("@")) {
                         return "invalid email";
                       }
                       return null;
@@ -135,7 +135,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                   child: TextFormField(
                     onSaved: (val) => print(val),
                     validator: (val) {
-                      if (val.isEmpty) {
+                      if (val!.isEmpty) {
                         return "Enter a valid phone number";
                       }
                       return null;
@@ -170,7 +170,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                       TextFormField(
                         onSaved: (val) => print(val),
                         validator: (val) {
-                          if (val.length < 6) {
+                          if (val!.length < 6) {
                             return "Password must not be greater than 6 characters";
                           }
                           return null;
@@ -230,7 +230,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                   child: TextFormField(
                     onSaved: (val) => print(val),
                     validator: (val) {
-                      if (val.isEmpty) {
+                      if (val!.isEmpty) {
                         return "Profession cannot be empty";
                       }
                       return null;
@@ -262,7 +262,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                   child: TextFormField(
                     onSaved: (val) => print(val),
                     validator: (val) {
-                      if (val.isEmpty) {
+                      if (val!.isEmpty) {
                         return "Write About Yourself";
                       }
                       return null;
@@ -295,7 +295,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                   child: TextFormField(
                     onSaved: (val) => print(val),
                     validator: (val) {
-                      if (val.isEmpty) {
+                      if (val!.isEmpty) {
                         return "Qualification can't be empty";
                       }
                       return null;
@@ -328,7 +328,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                       value: rememberMe,
                       onChanged: (v) {
                         setState(() {
-                          rememberMe = v;
+                          rememberMe = v!;
                         });
                       },
                     ),
@@ -339,7 +339,7 @@ class _SignUpWidget extends State<SignUpWidget> {
                   loginType: LoginType.signup,
                   onPressed: () {
                     var formState = formKeySignUp.currentState;
-                    if (formState.validate()) {
+                    if (formState!.validate()) {
                       formState.save();
                       showDialog(
                           context: context,
