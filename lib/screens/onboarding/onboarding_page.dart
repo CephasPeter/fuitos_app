@@ -15,6 +15,8 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
+  var currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -25,7 +27,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge, overlays: [SystemUiOverlay.top]);
 
     var bottomScreen1 = Container(
-      height: height*0.5,
+      height: height * 0.5,
       width: width,
       color: Colors.transparent,
       child: Padding(
@@ -33,14 +35,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
         child: Container(
           color: Colors.transparent,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Text("Get Jobs Done", style: TextStyle(fontSize: multiplier*0.12, fontWeight: FontWeight.bold, color: AppColor.accent)),
+              Text("Skilled  Professionals", style: TextStyle(fontSize: multiplier*0.14, fontWeight: FontWeight.bold, color: Colors.black)),
               Padding(
-                padding: EdgeInsets.only(bottom: height*0.05),
+                padding: EdgeInsets.only(bottom: height*0.02,right: width*0.6,top: height*0.02),
                 child: Container(
                   width: width*0.8,
-                  height: height*0.01,
+                  height: height*0.005,
                   color: AppColor.accent,
                 )
               ),
@@ -128,14 +131,100 @@ class _OnboardingPageState extends State<OnboardingPage> {
       width: width,
       color: Colors.transparent,
       child: Padding(
-        padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05,top: height*0.05,bottom: height*0.05),
+        padding: EdgeInsets.only(left: width * 0.1, right: width * 0.1,top: height*0.05,bottom: height*0.05),
         child: Container(
-          color: Colors.red,
+          color: Colors.transparent,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text("Make Payment", style: TextStyle(fontSize: multiplier*0.12, fontWeight: FontWeight.bold, color: AppColor.accent)),
+              Text("Easily", style: TextStyle(fontSize: multiplier*0.14, fontWeight: FontWeight.bold, color: Colors.black)),
+              Padding(
+                  padding: EdgeInsets.only(bottom: height*0.02,right: width*0.6,top: height*0.02),
+                  child: Container(
+                    width: width*0.8,
+                    height: height*0.005,
+                    color: AppColor.accent,
+                  )
+              ),
+              Text("Payment gateways used on our platform are user friendly.", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.black)),
+              SizedBox(
+                height: height*0.025,
+              ),
+              Row(
+                children: [
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("Pay with card", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                  SizedBox(
+                    width: width*0.10,
+                  ),
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("Cheap service fees", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: height*0.025,
+              ),
+              Row(
+                children: [
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("No hidden charges", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                  SizedBox(
+                    width: width*0.10,
+                  ),
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("Review Easily", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
-
-
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const  SystemUiOverlayStyle(
@@ -202,20 +291,42 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                     color: Colors.white,
                   ),
-                  child: SizedBox(
-                      height: height*0.5,
-                      width: width,
-                      child: PageView.builder(itemBuilder: (context, index) {
-                        if(index == 0) {
-                          return bottomScreen1;
-                        } else {
-                          return bottomScreen2;
-                        }
-                      },
-                      ),
-                    ),
+                  child: PageView.builder(itemCount: 2,itemBuilder: (context, index) {
+                    currentPage = index;
+                    if(index == 0) {
+                      return bottomScreen1;
+                    } else {
+                      return bottomScreen2;
+                    }
+                  },
+                  ),
                 ),
-              )
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: height*0.04,left: width * 0.1, right: width * 0.1,),
+                  child: Container(
+                    height: height*0.1,
+                    width: width,
+                    color: Colors.transparent,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        InkWell(
+                            onTap: (){
+
+                            }, child: Text("Skip", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
+                        InkWell(
+                          onTap: (){
+
+                          }, child: Text("Next", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
