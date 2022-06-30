@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../assets/color/color.dart';
+import '../../widgets/buttons.dart';
 
 class OnboardingLast extends StatefulWidget {
   const OnboardingLast({Key? key}) : super(key: key);
@@ -302,7 +303,15 @@ class _OnboardingLastState extends State<OnboardingLast> {
                         SizedBox(
                           height: height*0.025,
                         ),
+                        CurvedButton(
+                            height: height*0.03,
+                            width: width * 0.8,
+                            radius: 10,
+                            color: AppColor.darkBlue,
+                            child: Text("+  Deposit", textAlign: TextAlign.center, style: TextStyles.white14w600.copyWith(fontSize: multiplier * 0.06)),
+                            onPressed: (){
 
+                            })
                       ],
                     ),
                   ),
