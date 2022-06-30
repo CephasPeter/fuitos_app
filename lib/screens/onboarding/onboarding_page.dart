@@ -36,6 +36,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Text("Get skilled professionals skilled at different professions ranging from catering to fashion to household care", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.black)),
+              SizedBox(
+                height: height*0.025,
+              ),
               Row(
                 children: [
                   Row(
@@ -104,7 +108,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ],
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
