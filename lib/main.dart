@@ -13,21 +13,21 @@ class App extends StatelessWidget {
   const App({Key key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: AppColor.mainColor,
-          appBarTheme: const AppBarTheme(
-            color: AppColor.mainColor,
-          ),
-          colorScheme: ColorScheme.fromSwatch().copyWith(
-            secondary: AppColor.mainColor,
-          ),
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+    create: (context) => LoginOrSignUp(),
+    builder: (context, child) => child,
+    child: MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: AppColor.mainColor,
+        appBarTheme: const AppBarTheme(
+          color: AppColor.mainColor,
         ),
-        home: ChangeNotifierProvider(
-          create: (context) => LoginOrSignUp(),
-          builder: (context, child) => child,
-          child: const OnboardingHome(),
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: AppColor.mainColor,
         ),
-      );
+      ),
+      home: const OnboardingHome(),
+    ),
+  );
 }

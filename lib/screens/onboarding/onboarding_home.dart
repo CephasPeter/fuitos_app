@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../assets/color/color.dart';
+import 'onboarding_page.dart';
 
 class OnboardingHome extends StatefulWidget {
   const OnboardingHome({Key? key}) : super(key: key);
@@ -87,6 +88,11 @@ class _OnboardingHomeState extends State<OnboardingHome> {
                     Text("Available New version", style: TextStyle(fontSize: multiplier*0.06, fontWeight: FontWeight.bold, color: Colors.white)),
                     InkWell(
                       onTap: (){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const OnboardingPage(),
+                          ),
+                        );
                       },
                       child: Container(
                         width: width*0.2,
