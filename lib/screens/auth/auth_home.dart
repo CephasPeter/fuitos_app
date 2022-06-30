@@ -30,206 +30,6 @@ class _AuthHomeState extends State<AuthHome> {
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge, overlays: [SystemUiOverlay.top]);
 
-    var bottomScreen1 = Container(
-      height: height * 0.5,
-      width: width,
-      color: Colors.transparent,
-      child: Padding(
-        padding: EdgeInsets.only(left: width * 0.1, right: width * 0.1,top: height*0.05,bottom: height*0.05),
-        child: Container(
-          color: Colors.transparent,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text("Get Jobs Done", style: TextStyle(fontSize: multiplier*0.12, fontWeight: FontWeight.bold, color: AppColor.accent)),
-              Text("Skilled  Professionals", style: TextStyle(fontSize: multiplier*0.14, fontWeight: FontWeight.bold, color: Colors.black)),
-              Padding(
-                  padding: EdgeInsets.only(bottom: height*0.02,right: width*0.6,top: height*0.02),
-                  child: Container(
-                    width: width*0.8,
-                    height: height*0.005,
-                    color: AppColor.accent,
-                  )
-              ),
-              Text("Get skilled professionals skilled at different professions ranging from catering to fashion to household care", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.black)),
-              SizedBox(
-                height: height*0.025,
-              ),
-              Row(
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("Ease of payment", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                  SizedBox(
-                    width: width*0.12,
-                  ),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("Quick Support", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: height*0.025,
-              ),
-              Row(
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("Quick Delivery", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                  SizedBox(
-                    width: width*0.16,
-                  ),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("Easy Navigation", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-
-    var bottomScreen2 = Container(
-      height: height*0.5,
-      width: width,
-      color: Colors.transparent,
-      child: Padding(
-        padding: EdgeInsets.only(left: width * 0.1, right: width * 0.1,top: height*0.05,bottom: height*0.05),
-        child: Container(
-          color: Colors.transparent,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text("Make Payment", style: TextStyle(fontSize: multiplier*0.12, fontWeight: FontWeight.bold, color: AppColor.accent)),
-              Text("Easily", style: TextStyle(fontSize: multiplier*0.14, fontWeight: FontWeight.bold, color: Colors.black)),
-              Padding(
-                  padding: EdgeInsets.only(bottom: height*0.02,right: width*0.6,top: height*0.02),
-                  child: Container(
-                    width: width*0.8,
-                    height: height*0.005,
-                    color: AppColor.accent,
-                  )
-              ),
-              Text("Payment gateways used on our platform are user friendly.", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.black)),
-              SizedBox(
-                height: height*0.025,
-              ),
-              Row(
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("Pay with card", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                  SizedBox(
-                    width: width*0.10,
-                  ),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("Cheap service fees", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: height*0.025,
-              ),
-              Row(
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("No hidden charges", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                  SizedBox(
-                    width: width*0.10,
-                  ),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/images/checklist.svg",
-                        height: width*0.05,
-                        width: width*0.05,
-                      ),
-                      SizedBox(
-                        width: width*0.025,
-                      ),
-                      Text("Review Easily", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const  SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
@@ -241,17 +41,18 @@ class _AuthHomeState extends State<AuthHome> {
       child: Material(
         type: MaterialType.transparency,
         child: Container(
-          color: Colors.black,
+          color: Colors.white,
           child: Stack(
             children: [
               Container(
-                height: height*0.55,
+                height: height*0.5,
                 width: width,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/background2.png"),
+                    image: AssetImage("assets/images/background4.png"),
                     fit: BoxFit.cover,
                   ),
+
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(top: kToolbarHeight*0.8,left: width*0.03,right: width*0.03),
@@ -295,21 +96,11 @@ class _AuthHomeState extends State<AuthHome> {
                     ),
                     color: Colors.white,
                   ),
-                  child: PageView.builder(
-                    itemCount: 2,
-                    controller: pageController,
-                    itemBuilder: (context, index) {
-                      if(index == 0) {
-                        return bottomScreen1;
-                      } else {
-                        return bottomScreen2;
-                      }
-                    },
-                    onPageChanged: (index) {
-                      setState(() {
-                        currentPage = index;
-                      });
-                    },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+
+                    ],
                   ),
                 ),
               ),
