@@ -16,6 +16,7 @@ class OnboardingPage extends StatefulWidget {
 
 class _OnboardingPageState extends State<OnboardingPage> {
   var currentPage = 0;
+  var pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -291,7 +292,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                     color: Colors.white,
                   ),
-                  child: PageView.builder(itemCount: 2,itemBuilder: (context, index) {
+                  child: PageView.builder(itemCount: 2,controller: pageController,itemBuilder: (context, index) {
                     currentPage = index;
                     if(index == 0) {
                       return bottomScreen1;
@@ -318,9 +319,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             onTap: (){
 
                             }, child: Text("Skip", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
+
                         InkWell(
                           onTap: (){
-
+                            if(currentPage == 0) {
+                              pageController.nextPage(duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
+                            } else {
+                              //Navigator.pop(context);
+                            }
                           }, child: Text("Next", style: TextStyle(fontSize: multiplier*0.075, fontWeight: FontWeight.bold, color: Colors.black))),
                       ],
                     ),
