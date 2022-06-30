@@ -298,79 +298,11 @@ class _OnboardingLastState extends State<OnboardingLast> {
                               color: AppColor.accent,
                             )
                         ),
-                        Text("Get skilled professionals skilled at different professions ranging from catering to fashion to household care", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.black)),
+                        Text("Get skilled professionals skilled at different professions ranging from catering to fashion to household care", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.white)),
                         SizedBox(
                           height: height*0.025,
                         ),
-                        Row(
-                          children: [
-                            Row(
-                              children: [
-                                SvgPicture.asset(
-                                  "assets/images/checklist.svg",
-                                  height: width*0.05,
-                                  width: width*0.05,
-                                ),
-                                SizedBox(
-                                  width: width*0.025,
-                                ),
-                                Text("Ease of payment", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                              ],
-                            ),
-                            SizedBox(
-                              width: width*0.12,
-                            ),
-                            Row(
-                              children: [
-                                SvgPicture.asset(
-                                  "assets/images/checklist.svg",
-                                  height: width*0.05,
-                                  width: width*0.05,
-                                ),
-                                SizedBox(
-                                  width: width*0.025,
-                                ),
-                                Text("Quick Support", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: height*0.025,
-                        ),
-                        Row(
-                          children: [
-                            Row(
-                              children: [
-                                SvgPicture.asset(
-                                  "assets/images/checklist.svg",
-                                  height: width*0.05,
-                                  width: width*0.05,
-                                ),
-                                SizedBox(
-                                  width: width*0.025,
-                                ),
-                                Text("Quick Delivery", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                              ],
-                            ),
-                            SizedBox(
-                              width: width*0.16,
-                            ),
-                            Row(
-                              children: [
-                                SvgPicture.asset(
-                                  "assets/images/checklist.svg",
-                                  height: width*0.05,
-                                  width: width*0.05,
-                                ),
-                                SizedBox(
-                                  width: width*0.025,
-                                ),
-                                Text("Easy Navigation", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
-                              ],
-                            ),
-                          ],
-                        ),
+
                       ],
                     ),
                   ),
