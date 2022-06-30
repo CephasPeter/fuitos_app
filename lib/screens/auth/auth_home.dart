@@ -96,11 +96,40 @@ class _AuthHomeState extends State<AuthHome> {
                     ),
                     color: Colors.white,
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: height*0.08,top: height*0.08),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CurvedButton(
+                            height: height*0.05,
+                            width: width * 0.8,
+                            radius: 10,
+                            color: AppColor.accent,
+                            child: Text("Client", textAlign: TextAlign.center, style: TextStyles.white14w600.copyWith(fontSize: multiplier * 0.06)),
+                            onPressed: (){
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const AuthHome(),
+                                ),
+                              );
+                            }),
 
-                    ],
+                        CurvedButton(
+                            height: height*0.05,
+                            width: width * 0.8,
+                            radius: 10,
+                            color: AppColor.accent,
+                            child: Text("Artisan", textAlign: TextAlign.center, style: TextStyles.white14w600.copyWith(fontSize: multiplier * 0.06)),
+                            onPressed: (){
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const AuthHome(),
+                                ),
+                              );
+                            })
+                      ],
+                    ),
                   ),
                 ),
               ),
