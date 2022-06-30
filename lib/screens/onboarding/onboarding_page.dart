@@ -36,6 +36,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Padding(
+                padding: EdgeInsets.only(bottom: height*0.05),
+                child: Container(
+                  width: width*0.8,
+                  height: height*0.01,
+                  color: AppColor.accent,
+                )
+              ),
               Text("Get skilled professionals skilled at different professions ranging from catering to fashion to household care", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.black)),
               SizedBox(
                 height: height*0.025,

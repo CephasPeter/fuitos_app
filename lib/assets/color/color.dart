@@ -5,7 +5,7 @@ class AppColor {
   static const Color sliderBackgroundColor = Color(0XFFF5F6F8);
 
   static const Color primary = Color(0xFF3030FF);
-  static const Color accent = Color(0xFFD7D7FF);
+  static const Color accent = Color(0xFF57246F);
   static const Color backgroundTwo = Color(0xFFE5E5E5);
   static const Color background = Color(0xFFFFFFFF);
   static const Color darkerBlue = Color(0xFF010135);
