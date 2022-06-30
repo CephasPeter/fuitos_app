@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../assets/color/color.dart';
+import '../../assets/styles/textstyles.dart';
 import '../../widgets/buttons.dart';
 
 class OnboardingLast extends StatefulWidget {
@@ -301,14 +302,14 @@ class _OnboardingLastState extends State<OnboardingLast> {
                         ),
                         Text("Get skilled professionals skilled at different professions ranging from catering to fashion to household care", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.white)),
                         SizedBox(
-                          height: height*0.025,
+                          height: height*0.03,
                         ),
                         CurvedButton(
-                            height: height*0.03,
+                            height: height*0.05,
                             width: width * 0.8,
                             radius: 10,
-                            color: AppColor.darkBlue,
-                            child: Text("+  Deposit", textAlign: TextAlign.center, style: TextStyles.white14w600.copyWith(fontSize: multiplier * 0.06)),
+                            color: AppColor.accent,
+                            child: Text("Start Now", textAlign: TextAlign.center, style: TextStyles.white14w600.copyWith(fontSize: multiplier * 0.06)),
                             onPressed: (){
 
                             })
