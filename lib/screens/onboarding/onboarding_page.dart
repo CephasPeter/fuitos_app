@@ -24,6 +24,107 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge, overlays: [SystemUiOverlay.top]);
 
+    var bottomScreen1 = Container(
+      height: height*0.5,
+      width: width,
+      color: Colors.transparent,
+      child: Padding(
+        padding: EdgeInsets.only(left: width * 0.1, right: width * 0.1,top: height*0.05,bottom: height*0.05),
+        child: Container(
+          color: Colors.transparent,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("Ease of payment", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                  SizedBox(
+                    width: width*0.12,
+                  ),
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("Quick Support", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: height*0.025,
+              ),
+              Row(
+                children: [
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("Quick Delivery", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                  SizedBox(
+                    width: width*0.16,
+                  ),
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/checklist.svg",
+                        height: width*0.05,
+                        width: width*0.05,
+                      ),
+                      SizedBox(
+                        width: width*0.025,
+                      ),
+                      Text("Easy Navigation", style: TextStyle(fontSize: multiplier*0.065, fontWeight: FontWeight.w400, color: Colors.black)),
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+
+    var bottomScreen2 = Container(
+      height: height*0.5,
+      width: width,
+      color: Colors.transparent,
+      child: Padding(
+        padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05,top: height*0.05,bottom: height*0.05),
+        child: Container(
+          color: Colors.red,
+        ),
+      ),
+    );
+
+
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const  SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
@@ -89,8 +190,20 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                     color: Colors.white,
                   ),
+                  child: SizedBox(
+                      height: height*0.5,
+                      width: width,
+                      child: PageView.builder(itemBuilder: (context, index) {
+                        if(index == 0) {
+                          return bottomScreen1;
+                        } else {
+                          return bottomScreen2;
+                        }
+                      },
+                      ),
+                    ),
                 ),
-              ),
+              )
             ],
           ),
         ),
