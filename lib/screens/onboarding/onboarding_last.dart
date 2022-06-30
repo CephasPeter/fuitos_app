@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fuitos_app/screens/auth/auth_home.dart';
 
 import '../../assets/color/color.dart';
 import '../../assets/styles/textstyles.dart';
@@ -311,7 +312,11 @@ class _OnboardingLastState extends State<OnboardingLast> {
                             color: AppColor.accent,
                             child: Text("Start Now", textAlign: TextAlign.center, style: TextStyles.white14w600.copyWith(fontSize: multiplier * 0.06)),
                             onPressed: (){
-
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const AuthHome(),
+                                ),
+                              );
                             })
                       ],
                     ),

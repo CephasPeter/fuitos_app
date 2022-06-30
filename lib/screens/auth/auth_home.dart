@@ -242,82 +242,77 @@ class _AuthHomeState extends State<AuthHome> {
         type: MaterialType.transparency,
         child: Container(
           color: Colors.black,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Stack(
             children: [
-              Padding(
-                padding: EdgeInsets.only(top: kToolbarHeight*0.8,left: width*0.03,right: width*0.03),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: InkWell(
-                    onTap: (){
-                      Navigator.pop(context);
-                    },
-                    child: SvgPicture.asset(
-                      "assets/images/backArrow.svg",
-                      height: width*0.07,
-                      width: width*0.07,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: width*0.06,right: width*0.06,top: height*0.02),
-                child: Container(
-                  height: height*0.48,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/background3.png"),
-                        fit: BoxFit.cover,
-                      )
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(top: height*0.04,left: width*0.08,right: width*0.08,bottom: height*0.04),
-                    child: Image.asset(
-                      "assets/images/circles.png",
-                    ),
-                  ),
-                ),
-              ),
               Container(
-                height: height * 0.35,
+                height: height*0.55,
                 width: width,
-                color: Colors.transparent,
-                child: Padding(
-                  padding: EdgeInsets.only(left: width * 0.1, right: width * 0.1,top: height*0.02,bottom: height*0.02),
-                  child: Container(
-                    color: Colors.transparent,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Text("Finish", style: TextStyle(fontSize: multiplier*0.11, fontWeight: FontWeight.bold, color: AppColor.accent)),
-                        Text("Explore Now!", style: TextStyle(fontSize: multiplier*0.14, fontWeight: FontWeight.bold, color: Colors.white)),
-                        Padding(
-                            padding: EdgeInsets.only(bottom: height*0.02,right: width*0.6,top: height*0.02),
-                            child: Container(
-                              width: width*0.8,
-                              height: height*0.005,
-                              color: AppColor.accent,
-                            )
-                        ),
-                        Text("Get skilled professionals skilled at different professions ranging from catering to fashion to household care", style: TextStyle(fontSize: multiplier*0.078, fontWeight: FontWeight.w400, color: Colors.white)),
-                        SizedBox(
-                          height: height*0.03,
-                        ),
-                        CurvedButton(
-                            height: height*0.05,
-                            width: width * 0.8,
-                            radius: 10,
-                            color: AppColor.accent,
-                            child: Text("Start Now", textAlign: TextAlign.center, style: TextStyles.white14w600.copyWith(fontSize: multiplier * 0.06)),
-                            onPressed: (){
-
-                            })
-                      ],
-                    ),
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/background2.png"),
+                    fit: BoxFit.cover,
                   ),
                 ),
-              )
+                child: Padding(
+                  padding: EdgeInsets.only(top: kToolbarHeight*0.8,left: width*0.03,right: width*0.03),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                          child: SvgPicture.asset(
+                            "assets/images/backArrow.svg",
+                            height: width*0.07,
+                            width: width*0.07,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: width*0.18,
+                        color: Colors.transparent,
+                        child: Padding(
+                          padding: EdgeInsets.only(bottom: width*0.06),
+                          child: SvgPicture.asset("assets/images/appNameLogoWhite.svg"),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  height: height*0.5,
+                  width: width,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(30),
+                      topLeft: Radius.circular(30),
+                    ),
+                    color: Colors.white,
+                  ),
+                  child: PageView.builder(
+                    itemCount: 2,
+                    controller: pageController,
+                    itemBuilder: (context, index) {
+                      if(index == 0) {
+                        return bottomScreen1;
+                      } else {
+                        return bottomScreen2;
+                      }
+                    },
+                    onPageChanged: (index) {
+                      setState(() {
+                        currentPage = index;
+                      });
+                    },
+                  ),
+                ),
+              ),
             ],
           ),
         ),
