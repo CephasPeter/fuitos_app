@@ -186,10 +186,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             );
                           });
                       Timer(const Duration(seconds: 2), () {
-                        Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(
-                                builder: (_) => const TermsAndConditions()),
-                            (_) => false);
+                       
                       });
                     }
                   },
