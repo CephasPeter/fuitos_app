@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fuitos_app/assets/color/color.dart';
 import 'package:fuitos_app/assets/styles/textstyles.dart';
@@ -19,38 +20,54 @@ class TermsAndConditions extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: SvgPicture.asset(
+                      "assets/images/backArrow.svg",
+                      color: AppColor.mainColor,
+                    ),
+                  ),
+                ),
                 const Text(
                   "Terms & Conditions",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     color: Color(0XFF2A2A30),
                   ),
                 ),
-                const SizedBox(height: 25),
                 const Text(
                   'Usually a person can stop smoking for a couple of days, then the urge to smoke is so strong that one makes all kinds of excuses to start it again. It doesn’t matter how long you have been smoking, whether you are a social smoker.',
                   style: TextStyle(
                     color: Color(0XFF828393),
                   ),
                 ),
-                const TermsWidget(
-                    icons: FontAwesomeIcons.fireFlameSimple,
-                    details:
-                        "You have been smoking, whether you are a social smoker."),
-                const TermsWidget(
-                  details: "Whether you are a social smoker.",
-                  icons: FontAwesomeIcons.solidClock,
-                ),
-                const TermsWidget(
-                    details:
-                        "All kinds of methods have been advocated for quitting.",
-                    icons: FontAwesomeIcons.mobile),
-                const TermsWidget(
-                  details:
-                      "Hypnosis quit smoking methods has divided the medical.",
-                  icons: FontAwesomeIcons.kitMedical,
+                Column(
+                  children: const [
+                    TermsWidget(
+                        icons: FontAwesomeIcons.fireFlameSimple,
+                        details:
+                            "You have been smoking, whether you are a social smoker."),
+                    TermsWidget(
+                      details: "Whether you are a social smoker.",
+                      icons: FontAwesomeIcons.solidClock,
+                    ),
+                    TermsWidget(
+                        details:
+                            "All kinds of methods have been advocated for quitting.",
+                        icons: FontAwesomeIcons.mobile),
+                    TermsWidget(
+                      details:
+                          "Hypnosis quit smoking methods has divided the medical.",
+                      icons: FontAwesomeIcons.kitMedical,
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 25,
@@ -73,9 +90,9 @@ class TermsAndConditions extends StatelessWidget {
                         borderRadius: BorderRadius.circular(18.0),
                         side: const BorderSide(),
                       ),
-                      child: Text(
-                        "Back to Profile",
-                        style: const TextStyle(color: Colors.white),
+                      child: const Text(
+                        "Continue",
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
