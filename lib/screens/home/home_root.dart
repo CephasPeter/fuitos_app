@@ -18,7 +18,7 @@ class HomeRoot extends StatefulWidget {
 }
 
 class _HomeRootState extends State<HomeRoot> {
-  var currentPage = 0;
+  int bottomNavPosition = 0;
   var pageController = PageController();
 
   @override
@@ -45,6 +45,57 @@ class _HomeRootState extends State<HomeRoot> {
             height: height,
             width: width,
             color: Colors.white,
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: AppColor.background,
+            type: BottomNavigationBarType.fixed,
+            elevation: 0,
+            currentIndex: bottomNavPosition,
+            selectedLabelStyle: const TextStyle(
+              color: AppColor.primary,
+            ),
+            selectedItemColor: AppColor.primary,
+            onTap: (position){
+              setState(() {
+                bottomNavPosition = position;
+                if(position == 0){
+
+                }else if(position == 1){
+
+                }else if(position == 2){
+
+                }else if(position == 3){
+
+                }
+              });
+            },
+            items: <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: SvgPicture.asset('assets/images/grid.svg', color: Colors.grey, width: 25,height: 25),
+                label: '',
+                activeIcon: SvgPicture.asset('assets/images/grid_filled.svg', width: 30,height: 30),
+              ),
+              BottomNavigationBarItem(
+                icon: SvgPicture.asset('assets/images/search.svg', color: Colors.grey, width: 25,height: 25),
+                label: '',
+                activeIcon: SvgPicture.asset('assets/images/search_filled.svg', width: 30,height: 30),
+              ),
+              BottomNavigationBarItem(
+                icon: SvgPicture.asset('assets/images/messages.svg', color: Colors.grey, width: 25,height: 25),
+                label: '',
+                activeIcon: SvgPicture.asset('assets/images/messages_filled.svg', width: 30,height: 30),
+              ),
+              BottomNavigationBarItem(
+                icon: SvgPicture.asset('assets/images/settings.svg', color: Colors.grey, width: 25,height: 25),
+                label: '',
+                activeIcon: SvgPicture.asset('assets/images/settings_filled.svg', width: 30,height: 30),
+              ),
+              /*BottomNavigationBarItem(
+                        icon: SvgPicture.asset('assets/images/messages.svg', color: Colors.black, width: 25,height: 25),
+                        label: 'Message',
+                        activeIcon: SvgPicture.asset('assets/images/messages.svg', color: AppColor.primary, width: 25,height: 25),
+                      ),*/
+            ],
           ),
         ),
       ),
