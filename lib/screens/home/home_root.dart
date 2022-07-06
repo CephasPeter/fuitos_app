@@ -71,24 +71,24 @@ class _HomeRootState extends State<HomeRoot> {
             },
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/images/grid.svg', color: Colors.grey, width: 25,height: 25),
+                icon: SvgPicture.asset('assets/images/grid.svg', color: Colors.grey, width: width*0.06,height: width*0.06),
                 label: '',
-                activeIcon: SvgPicture.asset('assets/images/grid_filled.svg', width: 30,height: 30),
+                activeIcon: SvgPicture.asset('assets/images/grid_filled.svg', width: width*0.08,height: width*0.08),
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/images/search.svg', color: Colors.grey, width: 25,height: 25),
+                icon: SvgPicture.asset('assets/images/search.svg', color: Colors.grey, width: width*0.06,height: width*0.06),
                 label: '',
-                activeIcon: SvgPicture.asset('assets/images/search_filled.svg', width: 30,height: 30),
+                activeIcon: SvgPicture.asset('assets/images/search_filled.svg', width: width*0.08,height: width*0.08),
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/images/messages.svg', color: Colors.grey, width: 25,height: 25),
+                icon: SvgPicture.asset('assets/images/messages.svg', color: Colors.grey, width: width*0.06,height: width*0.06),
                 label: '',
-                activeIcon: SvgPicture.asset('assets/images/messages_filled.svg', width: 30,height: 30),
+                activeIcon: SvgPicture.asset('assets/images/messages_filled.svg', width: width*0.08,height: width*0.08),
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/images/settings.svg', color: Colors.grey, width: 25,height: 25),
+                icon: SvgPicture.asset('assets/images/settings.svg', color: Colors.grey, width: width*0.06,height: width*0.06),
                 label: '',
-                activeIcon: SvgPicture.asset('assets/images/settings_filled.svg', width: 30,height: 30),
+                activeIcon: SvgPicture.asset('assets/images/settings_filled.svg', width: width*0.08,height: width*0.08),
               ),
               /*BottomNavigationBarItem(
                         icon: SvgPicture.asset('assets/images/messages.svg', color: Colors.black, width: 25,height: 25),
