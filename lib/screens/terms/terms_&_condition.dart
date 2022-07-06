@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fuitos_app/assets/color/color.dart';
 import 'package:fuitos_app/assets/styles/textstyles.dart';
 import 'package:fuitos_app/screens/auth/login_screen.dart';
+import 'package:fuitos_app/screens/home/home_root.dart';
 
 class TermsAndConditions extends StatelessWidget {
   const TermsAndConditions({Key? key}) : super(key: key);
@@ -85,7 +86,11 @@ class TermsAndConditions extends StatelessWidget {
                     width: double.infinity,
                     child: RaisedButton(
                       color: AppColor.mainColor,
-                      onPressed: () => Navigator.of(context).pop(),
+                      onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const HomeRoot(),
+                        ),
+                      ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0),
                         side: const BorderSide(),
